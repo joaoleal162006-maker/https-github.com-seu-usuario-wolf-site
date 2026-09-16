@@ -3,34 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="WOLF PODS — catálogo premium com foco em sabores." />
+  <meta name="description" content="WOLF PODS — brutal premium, catálogo direto e intenso." />
   <title>WOLF PODS</title>
   <style>
     :root {
       --bg: #050505;
-      --bg-panel: #0d0d0d;
-      --card: #111;
-      --white: #f5f5f5;
-      --muted: #d9d9d9;
+      --bg-2: #0a0a0a;
+      --panel: #111111;
+      --panel-2: #1a1a1a;
       --line: rgba(255,255,255,.12);
-      --dark: #080808;
-      --shadow: rgba(0,0,0,.7);
+      --white: #f4f4f4;
+      --muted: #d7d7d7;
+      --soft: #e9e9e9;
+      --shadow: rgba(0,0,0,.75);
     }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      background: #050505;
+      background: var(--bg);
       color: var(--white);
       font-family: Arial, Helvetica, sans-serif;
     }
 
     a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; display: block; }
+    img { display: block; max-width: 100%; }
 
     .wrap {
-      width: min(100%, 1240px);
+      width: min(100%, 1280px);
       margin: 0 auto;
       padding: 0 18px;
     }
@@ -38,48 +39,49 @@
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 50;
+      z-index: 60;
       background: rgba(0,0,0,.96);
       border-bottom: 1px solid rgba(255,255,255,.05);
     }
 
     .topbar-inner {
-      min-height: 72px;
+      min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 16px;
     }
 
     .logo {
       display: inline-flex;
       align-items: flex-end;
-      gap: 5px;
+      gap: 4px;
       text-transform: uppercase;
       font-weight: 900;
       line-height: 1;
     }
 
     .logo-letter {
-      font-size: clamp(1.9rem, 2vw, 2.5rem);
-      letter-spacing: -0.08em;
+      font-size: clamp(1.9rem, 2vw, 2.6rem);
+      letter-spacing: -.08em;
     }
 
     .logo-small {
       font-size: .62rem;
-      letter-spacing: .38em;
-      margin-bottom: 4px;
+      letter-spacing: .4em;
+      margin-bottom: 5px;
     }
 
     .nav {
       display: flex;
       align-items: center;
-      gap: 26px;
+      gap: 24px;
       flex-wrap: wrap;
     }
 
     .nav a {
       font-size: .68rem;
-      letter-spacing: .15em;
+      letter-spacing: .16em;
       text-transform: uppercase;
       color: var(--white);
     }
@@ -94,52 +96,54 @@
       font-size: .66rem;
       letter-spacing: .12em;
       text-transform: uppercase;
+      background: rgba(255,255,255,.015);
     }
 
     .hero {
       padding: 30px 0 18px;
       background:
-        radial-gradient(circle at 50% 36%, rgba(255,255,255,.04), transparent 22%),
+        radial-gradient(circle at 50% 35%, rgba(255,255,255,.05), transparent 18%),
         linear-gradient(180deg, #050505 0%, #0a0a0a 100%);
     }
 
     .hero-inner {
+      min-height: 540px;
       display: grid;
       grid-template-columns: 1.1fr .9fr;
       gap: 24px;
-      min-height: 520px;
       align-items: center;
     }
 
     .eyebrow {
       display: inline-block;
-      font-size: .7rem;
+      font-size: .72rem;
+      font-weight: 700;
       letter-spacing: .24em;
       text-transform: uppercase;
       color: rgba(255,255,255,.72);
-      font-weight: 700;
     }
 
     .hero-title {
       margin: 18px 0 0;
-      font-size: clamp(3.8rem, 7vw, 8rem);
-      line-height: .8;
+      font-size: clamp(3.7rem, 7vw, 8.5rem);
+      line-height: .78;
       letter-spacing: -.08em;
       font-weight: 900;
       text-transform: uppercase;
     }
 
     .hero-sub {
-      margin-top: 14px;
+      margin-top: 15px;
+      color: var(--muted);
       font-size: .72rem;
       letter-spacing: .22em;
       text-transform: uppercase;
-      color: var(--muted);
     }
 
     .cta-row {
-      margin-top: 28px;
+      margin-top: 32px;
       display: flex;
+      align-items: center;
       gap: 14px;
       flex-wrap: wrap;
     }
@@ -162,6 +166,7 @@
 
     .btn-secondary {
       border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.02);
     }
 
     .hero-visual {
@@ -171,8 +176,8 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      background: radial-gradient(circle at 50% 36%, rgba(255,255,255,.06), transparent 24%), #0a0a0a;
       border: 1px solid rgba(255,255,255,.05);
+      background: radial-gradient(circle at 50% 36%, rgba(255,255,255,.06), transparent 24%), #090909;
     }
 
     .hero-visual::before {
@@ -181,30 +186,29 @@
       inset: 12% 18% 12% 18%;
       border-radius: 50%;
       background: rgba(255,255,255,.04);
-      filter: blur(40px);
+      filter: blur(38px);
     }
 
     .wolf-hero {
       position: relative;
       z-index: 1;
-      width: min(90%, 440px);
+      width: min(88%, 440px);
       height: 370px;
       object-fit: cover;
-      object-position: center;
-      border-radius: 30% 70% 50% 50% / 38% 40% 60% 62%;
+      border-radius: 32% 68% 52% 48% / 40% 42% 58% 60%;
       filter: grayscale(100%) brightness(.5) contrast(1.45) saturate(.12);
-      box-shadow: 0 18px 52px rgba(0,0,0,.7);
+      box-shadow: 0 18px 54px rgba(0,0,0,.7);
     }
 
     .hero-tag {
       position: absolute;
-      right: 28px;
-      bottom: 16px;
+      right: 24px;
+      bottom: 18px;
       z-index: 2;
       font-size: .72rem;
       letter-spacing: .18em;
       text-transform: uppercase;
-      color: rgba(255,255,255,.72);
+      color: rgba(255,255,255,.75);
     }
 
     .products {
@@ -255,12 +259,11 @@
     }
 
     .card {
-      position: relative;
-      overflow: hidden;
-      border-radius: 16px;
       border: 1px solid rgba(255,255,255,.08);
-      background: #0d0d0d;
-      box-shadow: 0 18px 35px rgba(0,0,0,.2);
+      border-radius: 18px;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+      box-shadow: 0 18px 32px rgba(0,0,0,.2);
     }
 
     .card-image {
@@ -287,18 +290,17 @@
     .device {
       position: relative;
       z-index: 1;
-      width: 78%;
+      width: 80%;
       height: 170px;
+      margin-bottom: 18px;
       border-radius: 18px 18px 16px 16px;
-      background: linear-gradient(180deg, rgba(0,0,0,.24), rgba(0,0,0,.72));
+      background: linear-gradient(180deg, rgba(0,0,0,.2), rgba(0,0,0,.72));
       border: 1px solid rgba(255,255,255,.15);
-      box-shadow: 0 28px 40px rgba(0,0,0,.28);
+      box-shadow: 0 28px 40px rgba(0,0,0,.26);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 18px;
-      padding: 12px 10px;
-      transform: perspective(800px) rotateX(8deg) rotateY(-16deg) rotateZ(-4deg);
+      transform: perspective(850px) rotateX(8deg) rotateY(-16deg) rotateZ(-4deg);
     }
 
     .device-mark {
@@ -307,12 +309,12 @@
       top: 50%;
       transform: translate(-50%, -50%);
       padding: 8px 12px;
-      border: 1px solid rgba(255,255,255,.12);
       border-radius: 999px;
-      font-size: .56rem;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.22);
+      font-size: .55rem;
       letter-spacing: .18em;
       text-transform: uppercase;
-      background: rgba(0,0,0,.24);
     }
 
     .device-label {
@@ -321,12 +323,12 @@
       left: 50%;
       transform: translateX(-50%);
       font-size: 1.5rem;
-      letter-spacing: -.06em;
       font-weight: 900;
-      text-transform: uppercase;
+      letter-spacing: -.06em;
       line-height: 1;
-      color: rgba(255,255,255,.96);
-      text-shadow: 0 8px 22px rgba(0,0,0,.25);
+      text-transform: uppercase;
+      color: rgba(255,255,255,.95);
+      text-shadow: 0 8px 30px rgba(0,0,0,.25);
     }
 
     .card-body {
@@ -394,7 +396,7 @@
       inset: 0;
       background-size: cover;
       background-position: center;
-      filter: saturate(1.2) contrast(1.04) brightness(.82);
+      filter: saturate(1.2) contrast(1.05) brightness(.84);
     }
 
     .flavor-item .label {
@@ -472,11 +474,13 @@
         <span class="logo-letter">WOLF</span>
         <span class="logo-small">PODS</span>
       </div>
+
       <nav class="nav" aria-label="Menu principal">
         <a href="#produtos">Produtos</a>
         <a href="#sabores">Sabores</a>
         <a href="#contato">Contato</a>
       </nav>
+
       <a class="pill" href="https://instagram.com/wolffpodds" target="_blank" rel="noopener">Instagram</a>
     </div>
   </header>
@@ -489,8 +493,8 @@
           <h1 class="hero-title">WOLF<br>PODS</h1>
           <div class="hero-sub">Sabores que te acompanham</div>
           <div class="cta-row">
-            <a href="#produtos" class="btn btn-primary">Ver produtos</a>
-            <a href="https://instagram.com/wolffpodds" target="_blank" rel="noopener" class="btn btn-secondary">Instagram</a>
+            <a class="btn btn-primary" href="#produtos">Ver produtos</a>
+            <a class="btn btn-secondary" href="https://instagram.com/wolffpodds" target="_blank" rel="noopener">Instagram</a>
           </div>
         </div>
 
