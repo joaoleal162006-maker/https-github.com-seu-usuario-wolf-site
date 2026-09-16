@@ -3,34 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="WOLF Black Edition — loja premium." />
+  <meta name="description" content="WOLF Black Edition — seleção premium." />
   <title>WOLF / BLACK EDITION</title>
   <style>
-    :root{--bg:#050505;--panel:#101010;--gold:#d4af5d;--gold2:#f4d995;--text:#f5f1ea;--muted:#bdb29c;--line:rgba(212,175,93,.34)}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;min-height:100vh;color:var(--text);font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at 50% 0,rgba(212,175,93,.12),transparent 30%),linear-gradient(135deg,#030303,#111)}
-    .store{width:min(100% - 32px,720px);margin:28px auto;background:rgba(9,9,9,.96);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 25px 80px #000;}
-    header{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid #ffffff0d}.brand{color:var(--gold2);font-size:.8rem;font-weight:700;letter-spacing:.45em;text-transform:uppercase}.age{padding:8px 13px;border:1px solid #d4af5d66;border-radius:30px;color:var(--gold2);font-size:.7rem;letter-spacing:.16em;font-weight:bold}
-    main{padding:42px 24px 30px;text-align:center}.mark{font-size:4rem;filter:drop-shadow(0 0 18px #d4af5d44)}h1{margin:14px 0 0;font-size:clamp(1.8rem,6vw,3.2rem);letter-spacing:.12em;text-transform:uppercase;line-height:1.1}.tagline{margin:15px 0 38px;color:var(--gold2);font-size:.72rem;letter-spacing:.38em;text-transform:uppercase;font-weight:bold}
-    .title{margin:0 0 18px;color:var(--gold2);font-size:.8rem;letter-spacing:.4em;text-transform:uppercase}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.product{min-height:130px;display:flex;align-items:center;justify-content:center;padding:18px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(135deg,#d4af5d1f,#ffffff03);color:var(--text);text-decoration:none;font-weight:bold;letter-spacing:.14em;text-transform:uppercase;transition:.2s}.product:hover{transform:translateY(-4px);border-color:#d4af5dcc;box-shadow:0 15px 30px #000}.actions{margin-top:28px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.button{display:inline-block;padding:14px 24px;border-radius:30px;border:1px solid #d4af5d73;color:var(--gold2);text-decoration:none;font-size:.72rem;font-weight:bold;letter-spacing:.18em;text-transform:uppercase}.primary{background:linear-gradient(180deg,#d4af5d2b,#d4af5d0d)}footer{padding:22px;text-align:center;border-top:1px solid #ffffff0d}.label{margin-bottom:9px;color:var(--muted);font-size:.68rem;letter-spacing:.3em;text-transform:uppercase}.instagram{color:var(--gold2);font-weight:bold;text-decoration:none;letter-spacing:.1em}
-    @media(max-width:560px){.products{grid-template-columns:1fr}.product{min-height:75px}.brand{letter-spacing:.2em}main{padding-top:32px}}
+    :root{--black:#050505;--black2:#0b0b0b;--card:#111;--gold:#caa45a;--gold2:#f5d995;--white:#f7f3ea;--muted:#a99f8d;--line:#caa45a55}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;color:var(--white);font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at 50% -5%,#7255233b,transparent 32%),linear-gradient(135deg,#030303,#111)}
+    .store{width:min(100% - 28px,900px);margin:24px auto;background:#080808f5;border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 30px 90px #000;position:relative}.store:before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 20%,#ffffff05 50%,transparent 80%);pointer-events:none}
+    header{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;padding:20px 28px;border-bottom:1px solid #fff1}.brand{color:var(--gold2);font-size:.8rem;font-weight:bold;letter-spacing:.48em;text-transform:uppercase}.age{padding:8px 14px;border:1px solid var(--line);border-radius:30px;color:var(--gold2);font-size:.7rem;font-weight:bold;letter-spacing:.16em}
+    main{position:relative;z-index:1;padding:58px 34px 42px}.hero{text-align:center}.eyebrow{color:var(--gold);font-size:.7rem;font-weight:bold;letter-spacing:.45em;text-transform:uppercase}.wolf{font-size:4.2rem;margin:14px 0 12px;filter:drop-shadow(0 0 20px #caa45a55)}h1{margin:0;font-size:clamp(2rem,6vw,4rem);letter-spacing:.14em;text-transform:uppercase;line-height:1.05}.hero p{max-width:520px;margin:18px auto 44px;color:var(--muted);font-size:.95rem;line-height:1.7}
+    .section-title{text-align:center;margin:0 0 22px;color:var(--gold2);font-size:.76rem;letter-spacing:.45em;text-transform:uppercase}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.product{min-height:300px;padding:18px 14px 20px;border:1px solid #caa45a44;border-radius:18px;background:linear-gradient(145deg,#ffffff08,#caa45a0b);text-decoration:none;color:var(--white);text-align:center;transition:.25s;position:relative;overflow:hidden}.product:hover{transform:translateY(-6px);border-color:#caa45acc;box-shadow:0 20px 35px #000}.product:after{content:"";position:absolute;width:150px;height:150px;top:-80px;right:-70px;background:#caa45a22;border-radius:50%;filter:blur(12px)}
+    .packshot{height:190px;display:flex;align-items:center;justify-content:center;position:relative}.device{position:relative;width:72px;height:145px;border-radius:18px 18px 14px 14px;background:linear-gradient(105deg,#242424,#080808 48%,#343434);box-shadow:inset 8px 0 10px #ffffff12,inset -8px 0 8px #000,0 20px 22px #000;border:1px solid #ffffff28}.device:before{content:"WOLF";position:absolute;top:48px;left:50%;transform:translateX(-50%) rotate(-90deg);font-size:11px;font-weight:bold;letter-spacing:3px;color:var(--gold2)}.device:after{content:"";position:absolute;top:-12px;left:16px;width:40px;height:13px;border-radius:7px 7px 2px 2px;background:#1d1d1d;border:1px solid #ffffff22}.elf .device{height:132px;border-radius:13px;background:linear-gradient(105deg,#302c24,#0b0b0b 52%,#7a5b25)}.elf .device:before{content:"ELFBAR";color:#fff}.lost .device{width:88px;height:102px;border-radius:9px;background:linear-gradient(135deg,#171717,#98752f,#121212)}.lost .device:before{content:"LOST VAPE";top:42px;color:#fff;font-size:9px}.product-name{display:block;margin-top:4px;color:var(--gold2);font-size:.9rem;font-weight:bold;letter-spacing:.18em;text-transform:uppercase}.product-sub{display:block;margin-top:8px;color:var(--muted);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
+    .actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:34px}.button{display:inline-block;padding:14px 24px;border:1px solid var(--line);border-radius:30px;color:var(--gold2);text-decoration:none;font-size:.7rem;font-weight:bold;letter-spacing:.18em;text-transform:uppercase}.primary{background:linear-gradient(180deg,#caa45a33,#caa45a0a)}footer{position:relative;z-index:1;padding:22px;text-align:center;border-top:1px solid #fff1}.label{margin-bottom:9px;color:var(--muted);font-size:.67rem;letter-spacing:.3em;text-transform:uppercase}.instagram{color:var(--gold2);text-decoration:none;font-weight:bold;letter-spacing:.12em}
+    @media(max-width:650px){main{padding:42px 18px 30px}.products{grid-template-columns:1fr}.product{min-height:245px}.packshot{height:150px}.brand{letter-spacing:.2em}.hero p{margin-bottom:34px}}
   </style>
 </head>
 <body>
   <div class="store">
     <header><div class="brand">WOLF</div><div class="age">18+</div></header>
     <main>
-      <div class="mark">🐺</div>
-      <h1>WOLF / BLACK EDITION</h1>
-      <p class="tagline">Premium Vape</p>
-      <h2 class="title">Catálogo</h2>
-      <section class="products" aria-label="Catálogo de produtos">
-        <a class="product" href="#">Ignite</a>
-        <a class="product" href="#">Elfbar</a>
-        <a class="product" href="#">Lost Vape</a>
-      </section>
-      <div class="actions"><a class="button primary" href="https://instagram.com/wolffpodds" target="_blank" rel="noopener">Instagram</a><a class="button" href="#">Voltar</a></div>
+      <section class="hero"><div class="eyebrow">Seleção exclusiva</div><div class="wolf">🐺</div><h1>WOLF / BLACK EDITION</h1><p>Uma experiência premium para quem procura presença, estilo e qualidade em cada detalhe.</p></section>
+      <section aria-label="Catálogo premium"><h2 class="section-title">Coleção em destaque</h2><div class="products">
+        <a class="product" href="#"><div class="packshot"><div class="device"></div></div><span class="product-name">Ignite</span><span class="product-sub">Performance premium</span></a>
+        <a class="product elf" href="#"><div class="packshot"><div class="device"></div></div><span class="product-name">Elfbar</span><span class="product-sub">Design e sabor</span></a>
+        <a class="product lost" href="#"><div class="packshot"><div class="device"></div></div><span class="product-name">Lost Vape</span><span class="product-sub">Tecnologia avançada</span></a>
+      </div></section>
+      <div class="actions"><a class="button primary" href="https://instagram.com/wolffpodds" target="_blank" rel="noopener">Ver Instagram</a><a class="button" href="#">Voltar</a></div>
     </main>
-    <footer><div class="label">Siga-nos</div><a class="instagram" href="https://instagram.com/wolffpodds" target="_blank" rel="noopener">@wolffpodds</a></footer>
+    <footer><div class="label">Siga a WOLF</div><a class="instagram" href="https://instagram.com/wolffpodds" target="_blank" rel="noopener">@wolffpodds</a></footer>
   </div>
 </body>
 </html>
